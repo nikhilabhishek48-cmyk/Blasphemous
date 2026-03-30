@@ -31,6 +31,15 @@
         <h2>The Miracle</h2>
         <p>In the kingdom of Cvstodia, a divine curse has turned the land into a living nightmare. Only the Penitent One carries the weight of sin to break the cycle.</p>
     </section>
+    <section id="prayer" class="section">
+  <h2>Offer a Prayer</h2>
+  <form id="prayer-form">
+    <input type="text" id="prayer-name" placeholder="Your Name (or Penitent One)" required><br><br>
+    <textarea id="prayer-message" placeholder="Speak your sins..." rows="4" required></textarea><br><br>
+    <button type="button" onclick="submitPrayer()">SEND PRAYER TO THE MIRACLE</button>
+  </form>
+  <div id="dynamic-lore"></div>
+</section>
 
     <section id="characters" class="section">
         <h2>The Penitent One</h2>
