@@ -2,39 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blasphemous Guide</title>
-
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-    <h1>Blasphemous Guide</h1>
-</header>
+<h1>Blasphemous Guide</h1>
 
-<section class="section">
+<div class="container">
+
     <h2>Bosses</h2>
 
-    <!-- ITEM -->
     <div class="accordion">
-        <div class="accordion-header">Ten Piedad</div>
+        <button class="accordion-header">Ten Piedad</button>
         <div class="accordion-content">
             <p>A giant beast representing twisted mercy.</p>
             <ul>
                 <li>Weakness: Slow attacks</li>
                 <li>Tip: Dodge first, then attack</li>
-                <li>Phase: Gets aggressive below 50% HP</li>
+                <li>Phase: Aggressive below 50% HP</li>
             </ul>
         </div>
     </div>
 
-    <!-- ITEM -->
     <div class="accordion">
-        <div class="accordion-header">Our Lady of the Charred Visage</div>
+        <button class="accordion-header">Our Lady of the Charred Visage</button>
         <div class="accordion-content">
             <p>A ranged boss using fire projectiles.</p>
             <ul>
@@ -45,56 +38,39 @@
         </div>
     </div>
 
-</section>
-
-<section class="section">
     <h2>Weapons</h2>
 
     <div class="accordion">
-        <div class="accordion-header">Mea Culpa</div>
+        <button class="accordion-header">Mea Culpa</button>
         <div class="accordion-content">
             <p>Main weapon of the Penitent One.</p>
             <ul>
                 <li>Upgradeable</li>
-                <li>Unlock special abilities</li>
+                <li>Unlock abilities</li>
             </ul>
         </div>
     </div>
 
-    <div class="accordion">
-        <div class="accordion-header">Prayers</div>
-        <div class="accordion-content">
-            <p>Magic-based abilities.</p>
-            <ul>
-                <li>Ranged attacks</li>
-                <li>Buffs and effects</li>
-            </ul>
-        </div>
-    </div>
-
-</section>
+</div>
 
 <script>
-    const headers = document.querySelectorAll(".accordion-header");
+document.querySelectorAll(".accordion-header").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
 
-    headers.forEach(header => {
-        header.addEventListener("click", () => {
-            const content = header.nextElementSibling;
-
-            // close others
-            document.querySelectorAll(".accordion-content").forEach(c => {
-                if (c !== content) c.style.maxHeight = null;
-            });
-
-            // toggle current
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
+        // close others
+        document.querySelectorAll(".accordion-content").forEach(c => {
+            if (c !== content) c.style.maxHeight = null;
         });
+
+        // toggle
+        content.style.maxHeight = content.style.maxHeight
+            ? null
+            : content.scrollHeight + "px";
     });
+});
 </script>
 
 </body>
 </html>
+
