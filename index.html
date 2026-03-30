@@ -3,264 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blasphemous - Penitent One</title>
-    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Creepster&display=swap)" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Blasphemous Site</title>
 
-        body {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0f1a 50%, #0f0a15 100%);
-            color: #e8d5b7;
-            font-family: 'Cinzel', serif;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
 
-        /* Animated background particles */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
-        .particle {
-            position: absolute;
-            background: radial-gradient(circle, #ff6b35, transparent);
-            border-radius: 50%;
-            animation: float 20s infinite linear;
-        }
+<body>
 
-        @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
-        }
+    <nav>
+        <h1>VOID</h1>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Rituals</a>
+            <a href="#">Forbidden</a>
+        </div>
+    </nav>
 
-        /* Header */
-        header {
-            position: relative;
-            z-index: 10;
-            padding: 2rem 0;
-            text-align: center;
-            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
-        }
+    <section class="hero">
+        <h1>ENTER THE ABYSS</h1>
+        <p>Where shadows whisper and code breathes darkness.</p>
+        <button class="btn">Begin Ritual</button>
+    </section>
 
-        h1 {
-            font-family: 'Creepster', cursive;
-            font-size: clamp(2.5rem, 8vw, 6rem);
-            color: #d4af37;
-            text-shadow: 
-                0 0 20px #d4af37,
-                0 0 40px #d4af37,
-                2px 2px 0 #000,
-                -2px -2px 0 #000;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-        }
+    <section class="cards">
+        <div class="card">
+            <h3>Dark Knowledge</h3>
+            <p>Secrets hidden beyond reality.</p>
+        </div>
+        <div class="card">
+            <h3>Forbidden Code</h3>
+            <p>Scripts that should not exist.</p>
+        </div>
+        <div class="card">
+            <h3>Chaos Realm</h3>
+            <p>Where logic breaks apart.</p>
+        </div>
+    </section>
 
-        .subtitle {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            color: #b8a68a;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-        }
-
-        /* Navigation */
-        nav {
-            margin-top: 2rem;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: #e8d5b7;
-            text-decoration: none;
-            padding: 0.8rem 1.5rem;
-            border: 2px solid transparent;
-            border-radius: 0;
-            font-size: 1.1rem;
-            font-weight: 700;
-            position: relative;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .nav-links a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #d4af37;
-            text-shadow: 0 0 10px #d4af37;
-        }
-
-        .nav-links a:hover::before {
-            opacity: 1;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            z-index: 10;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 0 2rem;
-        }
-
-        .hero h2 {
-            font-size: clamp(2rem, 5vw, 4rem);
-            margin-bottom: 1.5rem;
-            color: #ff6b35;
-            text-shadow: 
-                0 0 30px #ff6b35,
-                2px 2px 0 #000;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #d4af37, #ff6b35);
-            color: #000;
-            padding: 1rem 2.5rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 
-                0 10px 30px rgba(212, 175, 55, 0.4),
-                inset 0 1px 0 rgba(255,255,255,0.3);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 
-                0 15px 40px rgba(212, 175, 55, 0.6),
-                inset 0 1px 0 rgba(255,255,255,0.3);
-        }
-
-        /* Features Grid */
-        .features {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            z-index: 10;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 3rem;
-            color: #e8d5b7;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 0;
-            position: relative;
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #d4af37, #ff6b35, #d4af37);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255,255,255,0.08);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .feature-card h3 {
-            color: #d4af37;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background: rgba(0,0,0,0.9);
-            padding: 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            z-index: 10;
-        }
-
-        /* Responsive */
-        @media
+</body>
+</html>
+   
+    
