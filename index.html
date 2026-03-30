@@ -1,76 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Blasphemous Guide</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Blasphemous | The Penitent One's Complete Guide</title>
+  <!-- Google Fonts for atmospheric typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinema:wght@400;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">
+      <h1>BLASPHEMOUS</h1>
+      <p>Guía del Penitente | Complete A-to-Z Guide</p>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#lore" class="active">Lore & World</a></li>
+      <li><a href="#combat">Combat & Mea Culpa</a></li>
+      <li><a href="#bosses">Bosses</a></li>
+      <li><a href="#prayers">Prayers & Rosary</a></li>
+      <li><a href="#items">Relics & Items</a></li>
+      <li><a href="#endings">Endings</a></li>
+    </ul>
+  </div>
+</header>
 
-<h1>Blasphemous Guide</h1>
+<section class="hero">
+  <h2>❖ Sorrowful be the heart, Penitent One ❖</h2>
+  <p>The most exhaustive compendium — from Cvstodia's twisted lands to every Mea Culpa upgrade, secret boss, true ending, and hidden miracle. Walk the path of guilt.</p>
+</section>
 
 <div class="container">
-
-    <h2>Bosses</h2>
-
-    <div class="accordion">
-        <button class="accordion-header">Ten Piedad</button>
-        <div class="accordion-content">
-            <p>A giant beast representing twisted mercy.</p>
-            <ul>
-                <li>Weakness: Slow attacks</li>
-                <li>Tip: Dodge first, then attack</li>
-                <li>Phase: Aggressive below 50% HP</li>
-            </ul>
-        </div>
+  <!-- LORE + WORLD SECTION -->
+  <div id="lore">
+    <h2 class="section-title"><i class="fas fa-skull"></i> Lore & The Miracle</h2>
+    <div class="guide-grid">
+      <div class="card">
+        <i class="fas fa-church"></i>
+        <h3>Setting: Cvstodia</h3>
+        <p>A cursed land gripped by the Miracle — a divine but twisted force that manifests guilt into grotesque flesh and eternal penance. The Penitent One, silent and masked, breaks the cycle of the Grievous Miracle.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-mask"></i>
+        <h3>The Penitent One</h3>
+        <p>Last survivor of the Brotherhood of the Silent Sorrow. Wielding Mea Culpa, a sword born from guilt, he journeys to halt the perpetual torment and face the High Wills.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-dungeon"></i>
+        <h3>Key Factions</h3>
+        <ul>
+          <li><strong>Anointed Legion</strong> – corrupted soldiers.</li>
+          <li><strong>Confessor & Visages</strong> – manifestations of guilt.</li>
+          <li><strong>The Sorrowful</strong> – twisted by miracle's grief.</li>
+        </ul>
+      </div>
     </div>
+  </div>
 
-    <div class="accordion">
-        <button class="accordion-header">Our Lady of the Charred Visage</button>
-        <div class="accordion-content">
-            <p>A ranged boss using fire projectiles.</p>
-            <ul>
-                <li>Weakness: Close range</li>
-                <li>Tip: Stay mobile</li>
-                <li>Danger: Fire beams</li>
-            </ul>
-        </div>
+  <!-- COMBAT & MEA CULPA -->
+  <div id="combat">
+    <h2 class="section-title"><i class="fas fa-fist-raised"></i> Combat & Mea Culpa Heart</h2>
+    <div class="guide-grid">
+      <div class="card">
+        <i class="fas fa-sword"></i>
+        <h3>Mea Culpa Abilities</h3>
+        <ul>
+          <li><strong>Combo</strong> – 4-hit slash, heavy finisher.</li>
+          <li><strong>Dash Strike</strong> – sliding attack, breaks enemy poise.</li>
+          <li><strong>Verdiales of the Forsaken Hamlet</strong> – ranged projectile (prayer).</li>
+          <li><strong>Mea Culpa Hearts</strong> – alter sword mechanics (e.g., Heart of Oils, increased fervor generation).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Parry & Executions</h3>
+        <p>Precise blocking deflects attacks and opens enemies for <strong>executions</strong>. Executions grant invincibility frames and extra Tears of Atonement. Mastering parry is key for early bosses.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-gem"></i>
+        <h3>Fervor & Bile Flasks</h3>
+        <p>Fervor fuels prayers (special moves). Increase flask count via <strong>Nacimiento</strong> statues. Upgrades also enhance healing potency. <br> <span class="badge">Tip</span> Explore Albero for first upgrades.</p>
+      </div>
     </div>
+  </div>
 
-    <h2>Weapons</h2>
+  <!-- BOSSES SECTION - detailed table -->
+  <div id="bosses">
+    <h2 class="section-title"><i class="fas fa-dragon"></i> Bosses: Strategies & Weaknesses</h2>
+    <table class="boss-table">
+      <thead>
+        <tr><th>Boss</th><th>Location</th><th>Strategy / Tips</th><th>Reward</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Warden of the Silent Sorrow</td><td>Patio of the Silent Steps</td><td>Intro boss, parry his dash, punish with ground slam.</td><td>Key item: Linen of Golden Thread</td></tr>
+        <tr><td>Ten Piedad</td><td>Mercy Dreams</td><td>Use fire-enchanted attacks. Stay close to his back, avoid ground pound.</td><td>Heart of the Holy Purge, ability: Blood Wave</td></tr>
+        <tr><td>Our Lady of the Charred Visage</td><td>Graveyard of the Peaks</td><td>Ranged battle: deflect fireballs, use projectile prayers. Climb platforms to strike face.</td><td>Incense of the Envoys, unlocks new path</td></tr>
+        <tr><td>Tres Angustias</td><td>Jondo</td><td>Three sisters, focus on one at a time. Slide under horizontal beams. Vertical dodging essential.</td><td>Key: Wound of Abnegation, Mea Culpa heart</td></tr>
+        <tr><td>Quirce, Returned by Flames</td><td>Patio of the Silent Steps (later)</td><td>Fire sword master. Parry his flaming attacks, use fervor attacks to break his guard.</td><td>Apodictic Heart, marks path to Wall</td></tr>
+        <tr><td>Crisanta of the Wrapped Agony</td><td>Wall of the Holy Prohibitions</td><td>Very agile. Learn patterns: lunges, aerial slashes. Parry critical attacks. Use invincibility frames from dash.</td><td>Mea Culpa upgrade, key item</td></tr>
+        <tr><td>Escribar (Last Son of the Miracle)</td><td>Archcathedral Rooftops</td><td>Two phases: first use ranged prayers, second phase avoid instant death orbs. True torment.</td><td>Ending progression</td></tr>
+      </tbody>
+    </table>
+    <div class="quote">"For guilt is the currency of Cvstodia. Slay each boss with humility."</div>
+  </div>
 
-    <div class="accordion">
-        <button class="accordion-header">Mea Culpa</button>
-        <div class="accordion-content">
-            <p>Main weapon of the Penitent One.</p>
-            <ul>
-                <li>Upgradeable</li>
-                <li>Unlock abilities</li>
-            </ul>
-        </div>
+  <!-- PRAYERS & ROSARY BEADS -->
+  <div id="prayers">
+    <h2 class="section-title"><i class="fas fa-pray"></i> Essential Prayers & Rosary Beads</h2>
+    <table class="prayer-table">
+      <thead><tr><th>Prayer</th><th>Effect</th><th>Fervor Cost</th><th>Location</th></tr></thead>
+      <tbody>
+        <tr><td>Verdiales of the Forsaken Hamlet</td><td>Fires three projectiles, good for range.</td><td>Medium</td><td>Albero, from altar</td></tr>
+        <tr><td>Taranto to My Sister</td><td>Lightning strikes around you, massive AoE.</td><td>High</td><td>Desecrated Cistern</td></tr>
+        <tr><td>Zambra to the Resplendent Crown</td><td>Temporary invincibility + damage aura.</td><td>Very High</td><td>Graveyard of the Peaks secret room</td></tr>
+        <tr><td>Saeta Dolorosa</td><td>Heals on each hit landed for a duration.</td><td>Medium</td><td>Purchase from Candelaria (shop)</td></tr>
+        <tr><td>Debla of the Lights</td><td>Beam of light, massive single-target damage.</td><td>High</td><td>Library of the Negated Words</td></tr>
+      </tbody>
+    </table>
+    <div class="guide-grid" style="margin-top: 1rem;">
+      <div class="card"><i class="fas fa-circle"></i><h3>Rosary Beads (Key)</h3><ul><li><strong>Embers of a Broken Star</strong> – Fire resistance +</li><li><strong>Painted Wood Bead</strong> – Defense vs elemental</li><li><strong>Silver Grape</strong> – Increases flask healing</li><li><strong>Quicksilver</strong> – Faster fervor generation</li><li><strong>Consecrated Amethyst</strong> – Magic defense vs projectile</li></ul></div>
+      <div class="card"><i class="fas fa-cross"></i><h3>Knots & Altarpieces</h3><p>Altarpieces (Wounds of Eventide) grant powerful synergies: equip two matching figures for unique effects like increased parry window or life leech.</p></div>
     </div>
+  </div>
 
+  <!-- RELICS & KEY ITEMS -->
+  <div id="items">
+    <h2 class="section-title"><i class="fas fa-landmark"></i> Relics & Essential Items</h2>
+    <div class="items-grid">
+      <div class="item"><strong>✧ Linen of Golden Thread</strong> – Enables surviving deadly falls, unlocks deeper zones.</div>
+      <div class="item"><strong>✧ Three Gnarled Tongues</strong> – Activates vine bridges, essential for new routes.</div>
+      <div class="item"><strong>✧ Incense of the Envoys</strong> – Reveals hidden platforms and invisible bridges.</div>
+      <div class="item"><strong>✧ Nail Uprooted from Dirt</strong> – Opens blood platforms (crimson roots).</div>
+      <div class="item"><strong>✧ Scaly Coin</strong> – Allows purchase from the wandering merchant.</div>
+      <div class="item"><strong>✧ Tentudia's Carnal Remains</strong> – Warps between Prie Dieu altars (fast travel).</div>
+    </div>
+    <div class="card" style="margin: 1rem 0;">
+      <i class="fas fa-map-marked-alt"></i>
+      <h3>Key Quest Items</h3>
+      <p><strong>Holy Wounds (three)</strong>: Wound of Abnegation, Contrition, Compunction — used to access the true ending path. <strong>Immaculate Bead</strong> and <strong>Custodia of the Sin</strong> unlock final boss variation. Collect all before fighting Crisanta for "Ending C".</p>
+    </div>
+  </div>
+
+  <!-- ENDINGS & NG+ -->
+  <div id="endings">
+    <h2 class="section-title"><i class="fas fa-torii-gate"></i> Endings & New Game+ (A to Z)</h2>
+    <div class="guide-grid">
+      <div class="card"><i class="fas fa-skull-crossbones"></i><h3>Ending A: The Path of the Believer</h3><p>Defeat Escribar without completing the Holy Wounds quest. The Penitent One takes the throne, continuing the endless cycle of penance.</p></div>
+      <div class="card"><i class="fas fa-dove"></i><h3>Ending B: The Good Ending</h3><p>Complete the Holy Wounds (3 wounds) and defeat Crisanta without the immaculate bead? Actually true ending (Ending C) requires extra steps. In original base, Ending B breaks the cycle partially.</p></div>
+      <div class="card"><i class="fas fa-crown"></i><h3>Ending C (True Ending - Wounds of Eventide)</h3><p>Complete all: confessor statues, give all Holy Wounds, defeat Crisanta after equipping the Apodictic Heart, then face Escribar and finally fight the High Wills. Penitent One destroys the Miracle's root. Most canon ending.</p></div>
+    </div>
+    <div class="quote"><i class="fas fa-redo-alt"></i> <strong>Ascension Mode (NG+)</strong>: Unlocks after any ending. Adds new boss challenges, Penitence systems (Unwavering Faith, True Guilt, Bleeding Heart) that modify gameplay drastically.</div>
+  </div>
+
+  <!-- EXTRA: COMPLETE COLLECTIBLES -->
+  <div style="margin-top: 2rem;">
+    <h2 class="section-title"><i class="fas fa-trophy"></i> Collectibles & 100% Checklist</h2>
+    <div class="items-grid">
+      <div class="item"><strong>🕯️ Cherubs (20)</strong> – Hidden babies. Collect all to unlock <strong>Pewter Tears</strong> and heart upgrades.</div>
+      <div class="item"><strong>🗡️ Mea Culpa Shrines (7)</strong> – Upgrade sword damage and unlock new combo moves.</div>
+      <div class="item"><strong>💀 Rosary Bead Slots (8)</strong> – Expand slots by defeating bosses or discovering hidden rooms.</div>
+      <div class="item"><strong>📿 Quicksilver (5)</strong> – Upgrade bile flasks potency.</div>
+      <div class="item"><strong>🎭 Children of Moonlight (10)</strong> – Hidden in wall cracks, return to Albero for Tears and rewards.</div>
+      <div class="item"><strong>📜 Prayers (12 total)</strong> – Essential for maxing fervor builds.</div>
+    </div>
+    <div class="card" style="background: #1d0d09;">
+      <h3><i class="fas fa-seedling"></i> Secret Areas & Tips</h3>
+      <p><span class="badge">Hidden</span> Where Olive Trees Wither: Use blood platforms to reach secret boss Isidora, Voice of the Dead. <span class="badge">Pro Tip</span> Use "Miriam's Challenges" (Stir of Dawn DLC) for new prayers and skins. For maximum penitence, always equip <strong>Heart of the Virtuous Pain</strong> to boost Tears gain.</p>
+    </div>
+  </div>
 </div>
 
+<footer>
+  <p><i class="fas fa-crown"></i> Blasphemous Complete Guide — For the Penitent One seeking every secret, ending, and drop of lore. <br> Sorrowful be the heart, unwavering be the will. <i class="fas fa-cross"></i></p>
+  <p style="margin-top: 8px;">All game content © The Game Kitchen. Guide made for devotion to Cvstodia.</p>
+</footer>
+
+<!-- Smooth scroll for anchor links -->
 <script>
-document.querySelectorAll(".accordion-header").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const content = btn.nextElementSibling;
-
-        // close others
-        document.querySelectorAll(".accordion-content").forEach(c => {
-            if (c !== content) c.style.maxHeight = null;
-        });
-
-        // toggle
-        content.style.maxHeight = content.style.maxHeight
-            ? null
-            : content.scrollHeight + "px";
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if(target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, null, `#${targetId}`);
+      }
     });
-});
+  });
+  // active highlight on scroll (simple)
+  const sections = document.querySelectorAll('div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if(pageYOffset >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if(link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
 </script>
-
 </body>
 </html>
-
