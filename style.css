@@ -12,9 +12,8 @@ body {
 
 /* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
+    padding: 20px;
+    text-align: center;
     background: black;
     border-bottom: 1px solid crimson;
 }
@@ -22,83 +21,52 @@ header {
 header h1 {
     font-family: 'UnifrakturCook', cursive;
     color: crimson;
-    text-shadow: 0 0 10px crimson;
 }
 
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #ccc;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: crimson;
-}
-
-/* HERO */
-.hero {
-    height: 60vh;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), black),
-                url('https://via.placeholder.com/1200') center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    animation: fadeIn 2s ease;
-}
-
-.hero h2 {
-    font-size: 3rem;
-    color: crimson;
-    text-shadow: 0 0 15px crimson;
-}
-
-.hero p {
-    margin-top: 10px;
-    color: #bbb;
-}
-
-/* SECTIONS */
+/* SECTION */
 .section {
-    padding: 60px 50px;
+    padding: 40px;
 }
 
 .section h2 {
     color: crimson;
     margin-bottom: 20px;
-    border-left: 4px solid crimson;
-    padding-left: 10px;
 }
 
-/* CARDS */
-.card {
-    margin: 20px 0;
-    padding: 20px;
-    background: #111;
+/* ACCORDION */
+.accordion {
+    margin-bottom: 15px;
     border: 1px solid #222;
+}
+
+/* CLICKABLE HEADER */
+.accordion-header {
+    padding: 15px;
+    cursor: pointer;
+    background: #111;
     transition: 0.3s;
 }
 
-.card:hover {
-    border-color: crimson;
-    box-shadow: 0 0 10px crimson;
-    transform: translateX(10px);
+.accordion-header:hover {
+    background: crimson;
+    color: black;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
-    border-top: 1px solid crimson;
-    color: #777;
+/* HIDDEN CONTENT */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #0f0f0f;
+    transition: max-height 0.4s ease;
+    padding: 0 15px;
 }
 
-/* ANIMATION */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.accordion-content p,
+.accordion-content ul {
+    margin: 15px 0;
+}
+
+/* SMOOTH OPEN EFFECT */
+.accordion-content ul {
+    padding-left: 20px;
 }
