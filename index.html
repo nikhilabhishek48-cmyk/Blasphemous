@@ -3,48 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blasphemous Site</title>
+    <title>Game UI Site</title>
 
-    <!-- Link CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav>
-        <h1>VOID</h1>
-        <div>
-            <a href="#">Home</a>
-            <a href="#">Rituals</a>
-            <a href="#">Forbidden</a>
+    <div class="hud">
+        <h1>VOID.exe</h1>
+        <div class="xp-bar">
+            <div class="xp-fill" id="xp"></div>
         </div>
-    </nav>
+    </div>
 
-    <section class="hero">
-        <h1>ENTER THE ABYSS</h1>
-        <p>Where shadows whisper and code breathes darkness.</p>
-        <button class="btn">Begin Ritual</button>
+    <section class="menu">
+        <div class="menu-item" onclick="levelUp()">START</div>
+        <div class="menu-item">INVENTORY</div>
+        <div class="menu-item">MISSIONS</div>
+        <div class="menu-item">EXIT</div>
     </section>
 
     <section class="cards">
-        <div class="card">
-            <h3>Dark Knowledge</h3>
-            <p>Secrets hidden beyond reality.</p>
+        <div class="card" onclick="activateCard(this)">
+            <h3>Skill 1</h3>
+            <p>Click to unlock</p>
         </div>
-        <div class="card">
-            <h3>Forbidden Code</h3>
-            <p>Scripts that should not exist.</p>
+
+        <div class="card" onclick="activateCard(this)">
+            <h3>Skill 2</h3>
+            <p>Click to unlock</p>
         </div>
-        <div class="card">
-            <h3>Chaos Realm</h3>
-            <p>Where logic breaks apart.</p>
+
+        <div class="card" onclick="activateCard(this)">
+            <h3>Skill 3</h3>
+            <p>Click to unlock</p>
         </div>
     </section>
 
+    <script>
+        let xp = 0;
+
+        function levelUp() {
+            xp += 20;
+            if (xp > 100) xp = 0;
+            document.getElementById("xp").style.width = xp + "%";
+        }
+
+        function activateCard(card) {
+            card.classList.toggle("active");
+        }
+    </script>
+
 </body>
 </html>
-   
-    
