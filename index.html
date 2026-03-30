@@ -7,71 +7,94 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Gothic Font -->
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Blasphemous Guide</h1>
-        <nav>
-            <a href="#lore">Lore</a>
-            <a href="#weapons">Weapons</a>
-            <a href="#bosses">Bosses</a>
-        </nav>
-    </header>
+<header>
+    <h1>Blasphemous Guide</h1>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h2>The Path of the Penitent One</h2>
-        <p>A complete guide through suffering, secrets, and survival.</p>
-    </section>
+<section class="section">
+    <h2>Bosses</h2>
 
-    <!-- LORE -->
-    <section id="lore" class="section">
-        <h2>Lore</h2>
-        <p>
-            In the cursed land of Cvstodia, the Miracle twists faith into suffering.
-            You take the role of the Penitent One, the last survivor of a fallen brotherhood.
-        </p>
-    </section>
-
-    <!-- WEAPONS -->
-    <section id="weapons" class="section">
-        <h2>Weapons</h2>
-
-        <div class="card">
-            <h3>Mea Culpa</h3>
-            <p>The sword of guilt. Can be upgraded to unleash powerful abilities.</p>
+    <!-- ITEM -->
+    <div class="accordion">
+        <div class="accordion-header">Ten Piedad</div>
+        <div class="accordion-content">
+            <p>A giant beast representing twisted mercy.</p>
+            <ul>
+                <li>Weakness: Slow attacks</li>
+                <li>Tip: Dodge first, then attack</li>
+                <li>Phase: Gets aggressive below 50% HP</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="card">
-            <h3>Prayers</h3>
-            <p>Magical abilities that deal ranged damage or provide buffs.</p>
+    <!-- ITEM -->
+    <div class="accordion">
+        <div class="accordion-header">Our Lady of the Charred Visage</div>
+        <div class="accordion-content">
+            <p>A ranged boss using fire projectiles.</p>
+            <ul>
+                <li>Weakness: Close range</li>
+                <li>Tip: Stay mobile</li>
+                <li>Danger: Fire beams</li>
+            </ul>
         </div>
-    </section>
+    </div>
 
-    <!-- BOSSES -->
-    <section id="bosses" class="section">
-        <h2>Bosses</h2>
+</section>
 
-        <div class="card">
-            <h3>Ten Piedad</h3>
-            <p>A giant beast representing twisted mercy. Dodge and strike wisely.</p>
+<section class="section">
+    <h2>Weapons</h2>
+
+    <div class="accordion">
+        <div class="accordion-header">Mea Culpa</div>
+        <div class="accordion-content">
+            <p>Main weapon of the Penitent One.</p>
+            <ul>
+                <li>Upgradeable</li>
+                <li>Unlock special abilities</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="card">
-            <h3>Our Lady of the Charred Visage</h3>
-            <p>Uses fire attacks. Stay mobile and avoid projectiles.</p>
+    <div class="accordion">
+        <div class="accordion-header">Prayers</div>
+        <div class="accordion-content">
+            <p>Magic-based abilities.</p>
+            <ul>
+                <li>Ranged attacks</li>
+                <li>Buffs and effects</li>
+            </ul>
         </div>
-    </section>
+    </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Guide created for the Penitent Ones.</p>
-    </footer>
+</section>
+
+<script>
+    const headers = document.querySelectorAll(".accordion-header");
+
+    headers.forEach(header => {
+        header.addEventListener("click", () => {
+            const content = header.nextElementSibling;
+
+            // close others
+            document.querySelectorAll(".accordion-content").forEach(c => {
+                if (c !== content) c.style.maxHeight = null;
+            });
+
+            // toggle current
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
