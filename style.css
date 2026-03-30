@@ -1,83 +1,148 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-    background: #0f0a0a;
-    color: #ddd;
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    background: #0a0505; /* Deep cursed black */
+    color: #d4c3b3;       /* Old parchment / bone color */
+    font-family: Georgia, serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Gothic Header */
 header {
-    background: #1a0d1a;
-    padding: 1rem 5%;
+    background: linear-gradient(#1a0d0d, #0a0505);
+    padding: 1.5rem 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #800000;
+    border-bottom: 4px solid #8b0000; /* Blood red border */
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
 h1 {
-    color: #b71c1c;
-    font-size: 2rem;
-    letter-spacing: 4px;
+    color: #b71c1c; /* Classic Blasphemous blood red */
+    font-size: 2.8rem;
+    letter-spacing: 6px;
+    text-shadow: 0 0 15px #8b0000;
 }
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
 }
+
 nav a {
-    color: #ddd;
+    color: #d4c3b3;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s;
 }
-nav a:hover { color: #b71c1c; }
 
+nav a:hover {
+    color: #ff3333;
+    text-shadow: 0 0 8px #b71c1c;
+}
+
+/* Hero Section - Full screen dramatic */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-                #1a0d1a;
+    background: linear-gradient(rgba(10,5,5,0.85), rgba(10,5,5,0.95)),
+                #1a0d0d;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
 }
+
 .hero-content h2 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: #b71c1c;
-    text-shadow: 0 0 20px #800000;
-}
-.hero-content p {
-    font-size: 1.5rem;
-    margin: 20px 0;
-}
-button {
-    background: #800000;
-    color: white;
-    border: none;
-    padding: 18px 40px;
-    font-size: 1.3rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-button:hover {
-    background: #b71c1c;
-    transform: scale(1.1);
+    text-shadow: 0 0 30px #8b0000;
+    margin-bottom: 1rem;
+    letter-spacing: 4px;
 }
 
+.hero-content p {
+    font-size: 1.6rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #c8b8a8;
+}
+
+button {
+    background: #8b0000;
+    color: #fff;
+    border: 3px solid #b71c1c;
+    padding: 18px 50px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.4s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    background: #b71c1c;
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #ff3333;
+}
+
+/* Sections */
 .section {
-    padding: 80px 10%;
+    padding: 100px 10%;
     text-align: center;
     border-bottom: 1px solid #330000;
 }
+
 .section h2 {
     color: #b71c1c;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #8b0000;
 }
 
+.section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    color: #c8b8a8;
+}
+
+/* Prayer Form (we'll add this section soon) */
+form {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    background: #1a0d0d;
+    border: 2px solid #5c0000;
+    color: #d4c3b3;
+    font-family: Georgia, serif;
+}
+
+input:focus, textarea:focus {
+    border-color: #b71c1c;
+    outline: none;
+}
+
+/* Footer */
 footer {
-    background: #1a0d1a;
-    padding: 30px;
+    background: #0a0505;
+    padding: 40px 10%;
     text-align: center;
-    font-size: 0.9rem;
     color: #666;
+    font-size: 0.95rem;
+    border-top: 2px solid #330000;
 }
