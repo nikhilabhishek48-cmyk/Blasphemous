@@ -3,60 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game UI Site</title>
+    <title>Blasphemous Guide</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Gothic Font -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="hud">
-        <h1>VOID.exe</h1>
-        <div class="xp-bar">
-            <div class="xp-fill" id="xp"></div>
-        </div>
-    </div>
+    <!-- HEADER -->
+    <header>
+        <h1>Blasphemous Guide</h1>
+        <nav>
+            <a href="#lore">Lore</a>
+            <a href="#weapons">Weapons</a>
+            <a href="#bosses">Bosses</a>
+        </nav>
+    </header>
 
-    <section class="menu">
-        <div class="menu-item" onclick="levelUp()">START</div>
-        <div class="menu-item">INVENTORY</div>
-        <div class="menu-item">MISSIONS</div>
-        <div class="menu-item">EXIT</div>
+    <!-- HERO -->
+    <section class="hero">
+        <h2>The Path of the Penitent One</h2>
+        <p>A complete guide through suffering, secrets, and survival.</p>
     </section>
 
-    <section class="cards">
-        <div class="card" onclick="activateCard(this)">
-            <h3>Skill 1</h3>
-            <p>Click to unlock</p>
+    <!-- LORE -->
+    <section id="lore" class="section">
+        <h2>Lore</h2>
+        <p>
+            In the cursed land of Cvstodia, the Miracle twists faith into suffering.
+            You take the role of the Penitent One, the last survivor of a fallen brotherhood.
+        </p>
+    </section>
+
+    <!-- WEAPONS -->
+    <section id="weapons" class="section">
+        <h2>Weapons</h2>
+
+        <div class="card">
+            <h3>Mea Culpa</h3>
+            <p>The sword of guilt. Can be upgraded to unleash powerful abilities.</p>
         </div>
 
-        <div class="card" onclick="activateCard(this)">
-            <h3>Skill 2</h3>
-            <p>Click to unlock</p>
-        </div>
-
-        <div class="card" onclick="activateCard(this)">
-            <h3>Skill 3</h3>
-            <p>Click to unlock</p>
+        <div class="card">
+            <h3>Prayers</h3>
+            <p>Magical abilities that deal ranged damage or provide buffs.</p>
         </div>
     </section>
 
-    <script>
-        let xp = 0;
+    <!-- BOSSES -->
+    <section id="bosses" class="section">
+        <h2>Bosses</h2>
 
-        function levelUp() {
-            xp += 20;
-            if (xp > 100) xp = 0;
-            document.getElementById("xp").style.width = xp + "%";
-        }
+        <div class="card">
+            <h3>Ten Piedad</h3>
+            <p>A giant beast representing twisted mercy. Dodge and strike wisely.</p>
+        </div>
 
-        function activateCard(card) {
-            card.classList.toggle("active");
-        }
-    </script>
+        <div class="card">
+            <h3>Our Lady of the Charred Visage</h3>
+            <p>Uses fire attacks. Stay mobile and avoid projectiles.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Guide created for the Penitent Ones.</p>
+    </footer>
 
 </body>
 </html>
