@@ -1,50 +1,46 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background: #0b0b0b;
-    color: #e8e6e3;
-    font-family: 'Cinzel', serif;
+    color: #e6e6e6;
+    font-family: Arial, sans-serif;
 }
 
-/* HEADER */
-header {
-    padding: 20px;
+/* TITLE */
+h1 {
     text-align: center;
-    background: black;
-    border-bottom: 1px solid crimson;
-}
-
-header h1 {
-    font-family: 'UnifrakturCook', cursive;
     color: crimson;
+    margin: 20px 0;
 }
 
-/* SECTION */
-.section {
-    padding: 40px;
+/* CONTAINER */
+.container {
+    width: 60%;
+    margin: auto;
 }
 
-.section h2 {
+/* HEADINGS */
+h2 {
     color: crimson;
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
-/* ACCORDION */
+/* ACCORDION BOX */
 .accordion {
-    margin-bottom: 15px;
+    margin-top: 10px;
     border: 1px solid #222;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-/* CLICKABLE HEADER */
+/* BUTTON */
 .accordion-header {
+    width: 100%;
     padding: 15px;
-    cursor: pointer;
     background: #111;
-    transition: 0.3s;
+    color: #00ffcc;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .accordion-header:hover {
@@ -52,21 +48,21 @@ header h1 {
     color: black;
 }
 
-/* HIDDEN CONTENT */
+/* CONTENT */
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    background: #0f0f0f;
-    transition: max-height 0.4s ease;
+    background: #1a1a1a;
     padding: 0 15px;
+    transition: max-height 0.3s ease;
 }
 
 .accordion-content p,
 .accordion-content ul {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
-/* SMOOTH OPEN EFFECT */
-.accordion-content ul {
+/* LIST */
+ul {
     padding-left: 20px;
 }
